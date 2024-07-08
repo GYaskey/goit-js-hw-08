@@ -1,26 +1,5 @@
-class StringBuilder {
-  constructor(initialValue) {
-    this._value = initialValue;
-  }
-  getValue() {
-    return this._value;
-  }
-  padEnd(str) {
-    this._value = this._value + str;
-  }
-  padStart(str) {
-    this._value = str + this._value;
-  }
-  padBoth(str) {
-    this._value = str + this._value + str;
-  }
+function getRandomHexColor() {
+  return `#${Math.floor(Math.random() * 16777215)
+    .toString(16)
+    .padStart(6, 0)}`;
 }
-
-const builder = new StringBuilder('.');
-console.log(builder.getValue()); // "."
-builder.padStart('^');
-console.log(builder.getValue()); // "^."
-builder.padEnd('^');
-console.log(builder.getValue()); // "^.^"
-builder.padBoth('=');
-console.log(builder.getValue()); // "=^.^="
