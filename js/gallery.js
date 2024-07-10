@@ -88,7 +88,7 @@ function renderImg() {
 }
 
 renderImg();
-//==================================================
+//=================================================================================
 const galleryLinks = document.querySelectorAll('.gallery-link');
 
 galleryLinks.forEach(link => {
@@ -96,7 +96,7 @@ galleryLinks.forEach(link => {
     event.preventDefault();
   });
 });
-
+//==================================================================================
 gallery.addEventListener('click', event => {
   if (event.target === event.currentTarget) return;
   console.log(event.target.dataset.source);
